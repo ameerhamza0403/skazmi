@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import './drawer.dart';
+import 'package:pinch_zoom_image/pinch_zoom_image.dart';
 
 class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.green,
         accentColor: Colors.deepOrange,
       ),
       home: Scaffold(
@@ -19,7 +19,14 @@ class ContactPage extends StatelessWidget {
         body: Container(
             child: Column(
           children: <Widget>[
-            Text('Contact us here!'),
+            PinchZoomImage(
+              image: Image.asset(
+                "./assets/60.jpg",
+                fit: BoxFit.fill,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height/1.1329,
+              ),
+            ),
           ],
         )),
       ),
