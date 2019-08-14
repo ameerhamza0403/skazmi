@@ -17,7 +17,7 @@ class ContactPage extends StatelessWidget {
         ),
         drawer: HagDrawer(),
         body: Container(
-            child: Column(
+            child: ListView(
           children: <Widget>[
             PinchZoomImage(
               image: Image.asset(

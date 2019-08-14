@@ -1,30 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:pinch_zoom_image/pinch_zoom_image.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import './main.dart';
 // import 'package:photo_view/photo_view.dart';
 
 class StoryGallery extends StatelessWidget {
   // List<Container> _buildGridTileList(int count) => List.generate(
   //     count, (i) => Container(child: Image.asset('assets/$i.jpg')));
-  Future<bool> _onBackPressed(){
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.portraitUp,
-    ]);
-    return showDialog(
-      builder: (context)=>AlertDialog(
-        title: Text('data'),
-      ),
-    );
-  }
+    
+    
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
+    // SystemChrome.setPreferredOrientations([
+    //   DeviceOrientation.landscapeLeft,
+    //   DeviceOrientation.landscapeRight,
+    // ]);
     
     // return MaterialApp(
     //   theme: ThemeData(
@@ -38,12 +29,12 @@ class StoryGallery extends StatelessWidget {
     //     ),
     //     drawer: HagDrawer(),
     //     body:
-    return WillPopScope(
-      onWillPop: _onBackPressed,
-    child: TheGallery());
-  }
-}
+    
+    return TheGallery();
+
+  }}
 class TheGallery extends StatelessWidget{
+  
   @override
   Widget build(BuildContext context) {
     return new Swiper(

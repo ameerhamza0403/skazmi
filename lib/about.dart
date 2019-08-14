@@ -16,7 +16,7 @@ class AboutPage extends StatelessWidget {
         ),
         drawer: HagDrawer(),
         body: Container(
-            child: Column(
+            child: ListView(
           children: <Widget>[
             Container(
                 padding: EdgeInsets.all(40.0),
