@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:pinch_zoom_image/pinch_zoom_image.dart';
-import 'package:flutter/services.dart';
-import 'package:photo_view/photo_view.dart';
+// import 'package:flutter/services.dart';
+// import 'package:photo_view/photo_view.dart';
 
 class StoryGallery extends StatelessWidget {
   // List<Container> _buildGridTileList(int count) => List.generate(
@@ -31,8 +31,11 @@ class StoryGallery extends StatelessWidget {
       image: Image.asset(
           "./assets/$index.jpg",
           fit: BoxFit.fill,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
         ),
 );
+
       },
       itemCount: 61,
       index: 0,
